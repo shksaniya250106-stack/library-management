@@ -1,0 +1,79 @@
+/* --- 📜 Main Background --- */
+body {
+    background-color: #FDF8E3; /* Aged paper color */
+    background-image: url('https://www.transparenttextures.com/patterns/beige-paper.png'); /* Subtle paper texture */
+    font-family: 'Lora', serif; /* A classic, elegant serif font */
+}
+
+/* --- 🔥 Smooth Fade-In Animation --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 🃏 Main Content Cards (like login) --- */
+[data-testid="stAppViewContainer"] > .main > div[data-testid="stBlock"] {
+    background: rgba(255, 255, 255, 0.5); /* Slightly transparent white */
+    border: 1px solid #D3C5A8; /* Soft brown border */
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* --- ✒ Input Fields --- */
+div.stTextInput {
+    margin-bottom: 1rem;
+    animation: fadeIn 0.6s ease-in-out;
+}
+input {
+    border: 1px solid #D3C5A8 !important; /* Soft brown border */
+    padding: 10px !important;
+    border-radius: 8px !important;
+    background-color: #FFFFFF !important; /* Clean white background */
+    color: #4B3F3A; /* Dark brown text */
+    transition: all 0.3s ease;
+}
+input:focus {
+    background-color: #FFFFFF !important;
+    border-color: #8B4133 !important; /* Saddle brown color on focus */
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.2) !important;
+}
+
+/* --- 📖 Buttons --- */
+div.stButton {
+    animation: fadeIn 0.6s ease-in-out;
+}
+div.stButton > button {
+    background-color: #6B4F4B; /* Dark, wood-like color */
+    color: #FDF8E3; /* Aged paper color for text */
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: 1px solid #5A3E39;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+div.stButton > button:hover {
+    background-color: #5A3E39; /* Slightly darker on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- 🎨 Sidebar Styling --- */
+[data-testid="stSidebar"] {
+    background-color: #F0EAD6; /* A slightly darker paper color */
+    border-right: 2px solid #D3C5A8;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* --- 🧼 Autofill Fix --- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #FDF8E3 inset !important; /* Match body background */
+    -webkit-text-fill-color: #4B3F3A !important; /* Match input text color */
+    transition: background-color 5000s ease-in-out 0s;
+}
